@@ -1,0 +1,65 @@
+Algorithmic Fairness in Public Civic Datasets (API-based)
+Overview
+
+This project demonstrates the collection, preprocessing, and analysis of public civic datasets via API endpoints, with a focus on evaluating algorithmic fairness. It leverages real-time civic service data from Chicago 311 and NYC 311, providing reproducible pipelines to measure bias across demographic or service-related groups.
+
+The project highlights technical research engineering skills in Python, API integration, reproducible workflows, and fairness evaluation—key for socially aligned AI systems.
+
+Features
+
+API-based Data Retrieval: Fetches live civic datasets from:
+
+Chicago 311: https://data.cityofchicago.org/api/v3/views/ijzp-q8t2/query.json
+
+NYC 311: https://data.cityofnewyork.us/api/v3/views/erm2-nwe9/query.json
+
+Data Preprocessing: Handles missing values and encodes categorical features.
+
+Fairness Evaluation: Computes demographic parity differences and other fairness metrics.
+
+Experiment Tracking: Optional MLflow integration for reproducible and versioned experiments.
+
+Extensible Pipeline: Designed for integration with civic AI agents or NLP analysis frameworks.
+
+Installation
+git clone <repo-url>
+cd civic-fairness-api
+pip install -r requirements.txt
+
+
+Requirements:
+
+Python 3.9+
+
+pandas
+
+scikit-learn
+
+mlflow
+
+requests
+
+Usage
+python src/analyze.py
+
+
+This runs the full pipeline: fetches Chicago & NYC civic datasets via API, preprocesses the data, computes fairness metrics, and logs results with MLflow.
+
+Project Structure
+civic-fairness-api/
+│
+├── src/
+│   ├── data_api.py         # API fetch functions
+│   ├── preprocessing.py    # Data preprocessing
+│   ├── fairness_metrics.py # Bias/fairness computation
+│   └── analyze.py          # Full pipeline execution
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
+
+Contribution
+
+This pipeline is designed for research engineering and experimentation. Contributions enhancing fairness metrics, multi-agent integration, or interpretability are welcome.
+
+License
+
+MIT Licens
